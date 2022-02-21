@@ -9,6 +9,8 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { ExperimentComponent } from './components/experiment/experiment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,12 @@ import { ExperimentComponent } from './components/experiment/experiment.componen
     TodoComponent,
     ExperimentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
