@@ -19,25 +19,10 @@
     height: 7rem;
     font-size: 7rem;
   }
-
-  mat-icon[data-content="sunny"]:hover {
-    color: yellow;
-  }
-
-  mat-icon[data-content="task"]:hover {
-    color: purple;
-  }
-
-  mat-icon[data-content="pokemon"]:hover {
-    color: red;
-  }
-
-  mat-icon[data-content="science"]:hover {
-    color: green;
-  }
 }
 
-.tile:hover {
+a > .tile:hover,
+a:focus {
   transform: scale(1.01);
 
   mat-icon[data-content="sunny"] {
