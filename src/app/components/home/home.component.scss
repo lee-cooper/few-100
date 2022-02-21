@@ -1,0 +1,17 @@
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tile {
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 7px 0px lightgrey;
+  margin: 2rem;
+
+  h2 {
+    text-align: center;
+  }
+}
