@@ -25,8 +25,8 @@ a > .tile:hover,
 a:focus {
   transform: scale(1.01);
 
-  mat-icon[data-content="sunny"] {
-    color: yellow;
+  mat-icon[data-content="wb_sunny"] {
+    color: #eeca00;
   }
 
   mat-icon[data-content="task"] {
