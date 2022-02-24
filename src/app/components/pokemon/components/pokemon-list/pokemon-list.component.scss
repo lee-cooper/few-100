@@ -40,3 +40,9 @@
     color: white;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .pokemon-list {
+    width: 23rem;
+  }
+}
