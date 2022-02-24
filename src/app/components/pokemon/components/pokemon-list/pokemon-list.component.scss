@@ -2,6 +2,41 @@
   border: 1px solid lightgray;
   border-radius: 7px;
   box-shadow: 0 0 7px 0px lightgrey;
-  width: 25rem;
-  height: 22.6rem;
+  width: 12rem;
+  height: 25rem;
+  overflow-y: scroll;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+    border-top: 1px solid lightgray;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  button {
+    all: unset;
+    width: inherit;
+    cursor: pointer;
+    padding: 1rem;
+    border-top: 1px solid hsl(0, 0%, 83%);
+    background-color: inherit;
+  }
+
+  button:nth-of-type(1) {
+    border-top: none;
+  }
+
+  button:hover {
+    background-color: hsl(0, 0%, 82%);
+  }
+
+  button.highlight {
+    background-color: #0073f7;
+    color: white;
+  }
 }

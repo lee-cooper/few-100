@@ -1,5 +1,6 @@
 <app-pokemon-header></app-pokemon-header>
 <div class="pokemon-wrapper">
-  <app-pokemon-detail></app-pokemon-detail>
-  <app-pokemon-list></app-pokemon-list>
+  <app-pokemon-detail [selectedPokemon]="pokemonDetail$ | async"></app-pokemon-detail>
+  <app-pokemon-list [pokemonList]="pokemonList$ | async"
+                    (emitSelectedPokemon)="requestPokemonDetail($event)"></app-pokemon-list>
 </div>

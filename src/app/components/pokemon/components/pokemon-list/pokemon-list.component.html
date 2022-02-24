@@ -1,3 +1,11 @@
+Pokemon List
 <div class="pokemon-list">
-  list stuff here, maybe make this bigger
+  <ul>
+    <li *ngFor="let pokemon of pokemonList?.results">
+      <button (click)="selectPokemon(pokemon)"
+              [ngClass]="{'highlight': pokemon?.name == selectedPokemon?.name}">
+        {{ pokemon.name }}
+      </button>
+    </li>
+  </ul>
 </div>

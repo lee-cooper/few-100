@@ -1,6 +1,13 @@
+Pokemon Detail
 <section class="pokemon-detail">
-  <h2>#025 Pikachu</h2>
-  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
-       alt="pikachu" />
-  <span>Type: Electric</span>
+  <div *ngIf="selectedPokemon == undefined; else showPokemon">
+    <img src="https://pokemon-world-imdoug.netlify.app/img/pokeball.svg"
+         alt="">
+  </div>
+  <ng-template #showPokemon>
+    <h2>#{{selectedPokemon?.id}} {{selectedPokemon?.name}}</h2>
+    <img src="{{selectedPokemon?.image}}"
+         alt="Front sprite image of {{selectedPokemon?.name}}" />
+    <span>Type: {{selectedPokemon?.type}}</span>
+  </ng-template>
 </section>
