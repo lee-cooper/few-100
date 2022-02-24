@@ -1,6 +1,7 @@
 Pokemon Detail
 <section class="pokemon-detail">
-  <div *ngIf="selectedPokemon == undefined; else showPokemon">
+  <div *ngIf="selectedPokemon == undefined; else showPokemon"
+       class="placeholder-image">
     <img src="https://pokemon-world-imdoug.netlify.app/img/pokeball.svg"
          alt="">
   </div>
