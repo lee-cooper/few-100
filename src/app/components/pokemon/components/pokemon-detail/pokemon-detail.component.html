@@ -6,7 +6,7 @@ Pokemon Detail
          alt="">
   </div>
   <ng-template #showPokemon>
-    <h2>#{{selectedPokemon?.id}} {{selectedPokemon?.name}}</h2>
+    <h2>#{{selectedPokemon?.id?.toString()?.padStart(3, '0')}} {{selectedPokemon?.name}}</h2>
     <img src="{{selectedPokemon?.image}}"
          alt="Front sprite image of {{selectedPokemon?.name}}" />
     <span>Type: {{selectedPokemon?.type}}</span>
