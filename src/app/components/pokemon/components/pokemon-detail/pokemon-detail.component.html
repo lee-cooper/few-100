@@ -2,8 +2,8 @@ Pokemon Detail
 <section class="pokemon-detail">
   <div *ngIf="selectedPokemon == undefined; else showPokemon"
        class="placeholder-image">
-    <img src="https://pokemon-world-imdoug.netlify.app/img/pokeball.svg"
-         alt="">
+    <!-- <img src="https://pokemon-world-imdoug.netlify.app/img/pokeball.svg"
+         alt=""> -->
   </div>
   <ng-template #showPokemon>
     <h2>#{{selectedPokemon?.id?.toString()?.padStart(3, '0')}} {{selectedPokemon?.name}}</h2>

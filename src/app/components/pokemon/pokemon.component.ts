@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PokemonDetail } from './models/pokemon-detail.interface';
-import { PokemonList, PokemonListItem } from './models/pokemon-list.interface';
+import { PokemonDetail, PokemonList, PokemonListItem } from './models';
 import { PokemonService } from './services/pokemon.service';
 
 @Component({
@@ -11,18 +10,26 @@ import { PokemonService } from './services/pokemon.service';
 })
 export class PokemonComponent implements OnInit {
   pokemonList$!: Observable<PokemonList>;
-  pokemonDetail$!: Observable<any>;
+  pokemonDetail$!: Observable<PokemonDetail>;
 
-  constructor(public pokemonService: PokemonService) {}
+  // Pokemon service is injected into the component via dependency injection.
+  // - See Dependency Injection in Angular --> https://angular.io/guide/dependency-injection
+  constructor(private pokemonService: PokemonService) {}
 
+  // Angular Lifecycle Hook that is called after Angular has initialized all data bound properties
+  // - See NgOnInit docs --> https://angular.io/api/core/OnInit
+  // - See Angular Lifecycle Hooks --> https://angular.io/guide/lifecycle-hooks
   ngOnInit(): void {
-    this.pokemonService.requestPokemon();
-    this.pokemonList$ = this.pokemonService.pokemonList$;
-    this.pokemonDetail$ = this.pokemonService.pokemonDetail$;
+    this.requestPokemonList();
+  }
+
+  requestPokemonList(): void {
+    this.pokemonList$ = this.pokemonService.getPokemonList();
   }
 
   requestPokemonDetail(pokemonListItem: PokemonListItem): void {
-    this.pokemonService.requestPokemonDetail(pokemonListItem.url);
-    this.pokemonDetail$ = this.pokemonService.pokemonDetail$;
+    this.pokemonDetail$ = this.pokemonService.getPokemonDetail(
+      pokemonListItem.url
+    );
   }
 }

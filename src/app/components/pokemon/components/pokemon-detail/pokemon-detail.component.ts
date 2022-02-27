@@ -7,7 +7,7 @@ import { PokemonDetail } from '../../models/pokemon-detail.interface';
   styleUrls: ['./pokemon-detail.component.scss'],
 })
 export class PokemonDetailComponent implements OnInit {
-  @Input() selectedPokemon!: PokemonDetail;
+  @Input() selectedPokemon!: PokemonDetail | null;
 
   constructor() {}
 

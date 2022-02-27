@@ -1,24 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { PokemonDetail } from '../models/pokemon-detail.interface';
-import { PokemonList } from '../models/pokemon-list.interface';
+import { PokemonDetail, PokemonList } from '../models';
 
 @Injectable({ providedIn: 'root' })
 export class PokemonService {
+  rootUrl = 'https://pokeapi.co/api/v2';
+
+  // HttpClient service is injected into the component via dependency injection.
+  // - See Dependency Injection in Angular --> https://angular.io/guide/dependency-injection
+  // - See Angular HttpClient docs --> https://angular.io/api/common/http/HttpClient
   constructor(private httpClient: HttpClient) {}
 
-  pokemonList$!: Observable<PokemonList>;
-  pokemonDetail$!: Observable<any>;
-
-  requestPokemon(): void {
-    this.pokemonList$ = this.httpClient.get<PokemonList>(
-      'https://pokeapi.co/api/v2/pokemon/?limit=151'
+  getPokemonList(): Observable<PokemonList> {
+    return this.httpClient.get<PokemonList>(
+      `${this.rootUrl}/pokemon/?limit=151`
     );
   }
 
-  requestPokemonDetail(url: string): void {
-    this.pokemonDetail$ = this.httpClient.get<any>(url).pipe(
+  getPokemonDetail(url: string): Observable<PokemonDetail> {
+    return this.httpClient.get<any>(url).pipe(
       map(
         (response) =>
           ({
