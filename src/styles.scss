@@ -11,3 +11,9 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.horizontal-divider {
+  height: 1px;
+  background-color: lightgray;
+  width: 100%;
+}

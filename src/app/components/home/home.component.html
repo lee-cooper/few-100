@@ -3,35 +3,45 @@
   <span>{{ homeSubtitle }}</span>
 </div>
 <nav class="tiles">
-  <a routerLink="/weather">
-    <section class="tile">
-      <h2>Weather</h2>
-      <mat-icon data-content="wb_sunny"
-                class="material-icons-outlined">wb_sunny</mat-icon>
-    </section>
-  </a>
-  <a routerLink="/todo">
-    <section class="tile">
-      <h2>Todo</h2>
-      <mat-icon data-content="task"
-                class="material-icons-outlined">
-        task
-      </mat-icon>
-    </section>
-  </a>
   <a routerLink="/pokemon">
     <section class="tile">
       <h2>Pokemon</h2>
       <mat-icon data-content="pokemon">
         catching_pokemon
       </mat-icon>
+      <p>Displays Pokemon information retrieved from a Web API.</p>
+      <div class="horizontal-divider"></div>
+      <p>Fully built - great for reference.</p>
     </section>
   </a>
+  <a routerLink="/weather">
+    <section class="tile">
+      <h2>Weather</h2>
+      <mat-icon data-content="wb_sunny"
+                class="material-icons-outlined">wb_sunny</mat-icon>
+      <p>Displays Weather information retrieved from a Web API.</p>
+      <div class="horizontal-divider"></div>
+      <p>Partially built - apply learned concepts here.</p>
+    </section>
+  </a>
+  <!-- <a routerLink="/todo">
+    <section class="tile">
+      <h2>Todo</h2>
+      <mat-icon data-content="task"
+                class="material-icons-outlined">
+        task
+      </mat-icon>
+      <p>Might not need this if we have the weather API... TBD</p>
+    </section>
+  </a> -->
   <a routerLink="/experiment">
     <section class="tile">
       <h2>Experiment</h2>
       <mat-icon data-content="science"
                 class="material-icons-outlined">science</mat-icon>
+      <p>Empty space for your next big adventure! Y'know, for science!</p>
+      <div class="horizontal-divider"></div>
+      <p>Empty - The sky is the limit!.</p>
     </section>
   </a>
 </nav>
