@@ -15,6 +15,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonService } from './components/pokemon/services/pokemon.service';
 import { TodoComponent } from './components/todo/todo.component';
 import { WeatherComponent } from './components/weather/weather.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { WeatherComponent } from './components/weather/weather.component';
     PokemonHeaderComponent,
     PokemonDetailComponent,
     PokemonListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
