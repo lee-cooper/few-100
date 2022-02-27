@@ -16,6 +16,7 @@ import { PokemonDetailComponent } from './components/pokemon/components/pokemon-
 import { PokemonListComponent } from './components/pokemon/components/pokemon-list/pokemon-list.component';
 import { PokemonService } from './components/pokemon/services/pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonActionsComponent } from './components/pokemon/components/pokemon-actions/pokemon-actions.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     PokemonHeaderComponent,
     PokemonDetailComponent,
     PokemonListComponent,
+    PokemonActionsComponent,
   ],
   imports: [
     BrowserModule,

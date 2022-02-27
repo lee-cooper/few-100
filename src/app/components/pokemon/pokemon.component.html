@@ -1,3 +1,19 @@
+<!-- 
+  After creating a component, it can be used in HTML using the component's selector
+
+  Consider the below code:
+
+  <app-pokemon-header></app-pokemon-header>
+
+  The pokemon header component specifies the selector's name which is used to display
+  it in the HTML.
+
+  @Component({
+    selector: 'app-pokemon-header', <------------------ this is the selector
+    templateUrl: './pokemon-header.component.html',
+    styleUrls: ['./pokemon-header.component.scss']
+  })
+ -->
 <app-pokemon-header></app-pokemon-header>
 <div class="pokemon-wrapper">
   <!-- 
@@ -42,3 +58,4 @@
   <app-pokemon-list [pokemonList]="pokemonList$ | async"
                     (emitSelectedPokemon)="requestPokemonDetail($event)"></app-pokemon-list>
 </div>
+<app-pokemon-actions></app-pokemon-actions>
