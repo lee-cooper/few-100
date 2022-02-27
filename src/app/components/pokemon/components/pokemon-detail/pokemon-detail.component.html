@@ -4,6 +4,10 @@
     <h2>#{{selectedPokemon?.id}} {{selectedPokemon?.name}}</h2>
     <img src="{{selectedPokemon?.image}}"
          alt="Front sprite of {{selectedPokemon?.name}}" />
-    <span>Type: {{selectedPokemon?.type}}</span>
+    <div class="pokemon-stats">
+      <span>Type: <span class="pokemon-type">{{selectedPokemon?.type}}</span></span>
+      <span>Height: {{selectedPokemon?.height}}</span>
+      <span>Weight: {{selectedPokemon?.weight}}</span>
+    </div>
   </div>
 </section>

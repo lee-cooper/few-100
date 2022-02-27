@@ -27,6 +27,8 @@ export class PokemonService {
             image: response.sprites.front_default,
             name: response.name,
             type: response.types.map((poke: any) => poke.type.name).join(' / '),
+            height: response.height,
+            weight: response.weight,
           } as PokemonDetail)
       )
     );

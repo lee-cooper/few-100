@@ -9,10 +9,10 @@
   border: 1px solid lightgray;
   border-radius: 7px;
   box-shadow: 0 0 7px 0px lightgrey;
-  text-align: center;
 
   h2 {
     text-transform: capitalize;
+    text-align: center;
   }
 
   img {
@@ -20,12 +20,7 @@
     height: 15rem;
     min-width: 15rem;
     max-width: 15rem;
-    margin-bottom: 1rem;
     display: block;
-  }
-
-  span {
-    margin-bottom: 1rem;
   }
 }
 
@@ -34,4 +29,14 @@
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 0.5rem;
+}
+
+.pokemon-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .pokemon-type {
+    text-transform: capitalize;
+  }
 }
