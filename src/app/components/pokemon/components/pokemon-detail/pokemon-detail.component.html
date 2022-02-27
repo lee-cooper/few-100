@@ -1,13 +1,23 @@
 <span class="component-header">Pokemon Detail</span>
 <section class="pokemon-detail">
-  <div *ngIf="selectedPokemon != undefined">
+  <div *ngIf="selectedPokemon != undefined"
+       class="wrapper">
     <h2>#{{selectedPokemon?.id}} {{selectedPokemon?.name}}</h2>
     <img src="{{selectedPokemon?.image}}"
          alt="Front sprite of {{selectedPokemon?.name}}" />
     <div class="pokemon-stats">
-      <span>Type: <span class="pokemon-type">{{selectedPokemon?.type}}</span></span>
-      <span>Height: {{selectedPokemon?.height}}</span>
-      <span>Weight: {{selectedPokemon?.weight}}</span>
+      <div class="pokemon-stat">
+        <span>Height:</span>
+        <span class="pokemon-type">{{selectedPokemon?.height}}</span>
+      </div>
+      <div class="pokemon-stat">
+        <span>Type:</span>
+        <span class="pokemon-type">{{selectedPokemon?.type}}</span>
+      </div>
+      <div class="pokemon-stat">
+        <span>Weight:</span>
+        <span class="pokemon-type">{{selectedPokemon?.weight}}</span>
+      </div>
     </div>
   </div>
 </section>
