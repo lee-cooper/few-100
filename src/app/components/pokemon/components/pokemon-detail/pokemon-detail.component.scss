@@ -9,6 +9,7 @@
   border: 1px solid lightgray;
   border-radius: 7px;
   box-shadow: 0 0 7px 0px lightgrey;
+  text-align: center;
 
   img {
     width: 100%;
@@ -16,6 +17,7 @@
     min-width: 15rem;
     max-width: 15rem;
     margin-bottom: 1rem;
+    display: block;
   }
 
   span {

@@ -1,5 +1,5 @@
 export interface PokemonDetail {
-  id: number;
+  id: string;
   name: string;
   image: string;
   type: string;

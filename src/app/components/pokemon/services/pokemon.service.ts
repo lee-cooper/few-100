@@ -23,7 +23,7 @@ export class PokemonService {
       map(
         (response) =>
           ({
-            id: response.id,
+            id: response.id.toString()?.padStart(3, '0'),
             image: response.sprites.front_default,
             name: response.name,
             type: response.types.map((poke: any) => poke.type.name).join(' / '),

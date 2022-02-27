@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PokemonDetail } from '../../models/pokemon-detail.interface';
 
 @Component({
@@ -6,10 +6,6 @@ import { PokemonDetail } from '../../models/pokemon-detail.interface';
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.scss'],
 })
-export class PokemonDetailComponent implements OnInit {
+export class PokemonDetailComponent {
   @Input() selectedPokemon!: PokemonDetail | null;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
