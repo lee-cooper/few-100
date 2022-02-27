@@ -3,7 +3,7 @@
   <ul>
     <li *ngFor="let pokemon of pokemonList?.results">
       <button (click)="selectPokemon(pokemon)"
-              [ngClass]="{'highlight': pokemon?.name == selectedPokemon?.name}">
+              [ngClass]="{'highlight': pokemon?.name === selectedPokemon?.name}">
         {{ pokemon.name }}
       </button>
     </li>
