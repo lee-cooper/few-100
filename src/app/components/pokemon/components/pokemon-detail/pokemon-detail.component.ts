@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PokemonDetail } from '../../models/pokemon-detail.interface';
 
 @Component({
@@ -8,4 +8,10 @@ import { PokemonDetail } from '../../models/pokemon-detail.interface';
 })
 export class PokemonDetailComponent {
   @Input() selectedPokemon!: PokemonDetail | null;
+  @Output() addToTeam: EventEmitter<PokemonDetail> =
+    new EventEmitter<PokemonDetail>();
+
+  addPokemonToTeam(pokemonToAdd: PokemonDetail): void {
+    this.addToTeam.emit(pokemonToAdd);
+  }
 }

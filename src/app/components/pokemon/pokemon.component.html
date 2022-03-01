@@ -36,7 +36,8 @@
     - See Async pipe -> https://angular.io/api/common/AsyncPipe
     - See Angular property binding -- https://angular.io/guide/property-binding#binding-to-a-property
   -->
-  <app-pokemon-detail [selectedPokemon]="pokemonDetail$ | async"></app-pokemon-detail>
+  <app-pokemon-detail [selectedPokemon]="pokemonDetail$ | async"
+                      (addToTeam)="addPokemonToTeam($event)"></app-pokemon-detail>
 
   <!-- 
     Child-to-parent event binding
@@ -59,5 +60,5 @@
                     (emitSelectedPokemon)="requestPokemonDetail($event)"></app-pokemon-list>
 </div>
 <div class="pokemon-team-wrapper">
-  <app-pokemon-team></app-pokemon-team>
+  <app-pokemon-team [currentPokemonTeam]="currentPokemonTeam"></app-pokemon-team>
 </div>

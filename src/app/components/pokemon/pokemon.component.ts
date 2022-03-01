@@ -14,6 +14,8 @@ export class PokemonComponent implements OnInit {
   pokemonList$!: Observable<PokemonList>;
   pokemonDetail$!: Observable<PokemonDetail>;
 
+  currentPokemonTeam: PokemonDetail[] = [];
+
   // Pokemon service is injected into the component via dependency injection.
   // - See Dependency Injection in Angular --> https://angular.io/guide/dependency-injection
   constructor(private pokemonService: PokemonService) {}
@@ -38,5 +40,11 @@ export class PokemonComponent implements OnInit {
     this.pokemonDetail$ = this.pokemonService.getPokemonDetail(
       pokemonListItem.url
     );
+  }
+
+  addPokemonToTeam(pokemonToAdd: PokemonDetail): void {
+    if (this.currentPokemonTeam.length !== 6) {
+      this.currentPokemonTeam = [...this.currentPokemonTeam, pokemonToAdd];
+    }
   }
 }
