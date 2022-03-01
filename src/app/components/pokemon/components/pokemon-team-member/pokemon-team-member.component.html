@@ -1,4 +1,5 @@
-<section class="pokemon-team-member">
+<section class="pokemon-team-member"
+         *ngIf="pokemonTeamMember != undefined">
 
   <span>{{ pokemonTeamMember?.name }}</span>
   <img src="{{pokemonTeamMember?.image}}"

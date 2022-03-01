@@ -60,5 +60,6 @@
                     (emitSelectedPokemon)="requestPokemonDetail($event)"></app-pokemon-list>
 </div>
 <div class="pokemon-team-wrapper">
-  <app-pokemon-team [currentPokemonTeam]="currentPokemonTeam"></app-pokemon-team>
+  <app-pokemon-team [currentPokemonTeam]="currentPokemonTeam"
+                    (removeFromTeam)="removePokemonFromTeam($event)"></app-pokemon-team>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PokemonDetail } from '../../models';
 
 @Component({
@@ -8,6 +8,10 @@ import { PokemonDetail } from '../../models';
 })
 export class PokemonTeamMemberComponent {
   @Input() pokemonTeamMember!: PokemonDetail | null;
+  @Output() removeFromTeam: EventEmitter<PokemonDetail> =
+    new EventEmitter<PokemonDetail>();
 
-  removePokemonFromTeam(pokemonToRemove: PokemonDetail | null): void {}
+  removePokemonFromTeam(pokemonToRemove: PokemonDetail): void {
+    this.removeFromTeam.emit(pokemonToRemove);
+  }
 }

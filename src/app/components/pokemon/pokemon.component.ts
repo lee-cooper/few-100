@@ -47,4 +47,9 @@ export class PokemonComponent implements OnInit {
       this.currentPokemonTeam = [...this.currentPokemonTeam, pokemonToAdd];
     }
   }
+
+  removePokemonFromTeam(pokemonToRemove: PokemonDetail): void {
+    const indexToRemove = this.currentPokemonTeam.indexOf(pokemonToRemove, 0);
+    this.currentPokemonTeam.splice(indexToRemove, 1);
+  }
 }
