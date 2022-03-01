@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 /*
+  Components
 
   Components are the most basic UI building block of an Angular app. An Angular app contains a tree of Angular components.
 

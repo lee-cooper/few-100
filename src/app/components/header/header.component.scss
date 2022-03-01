@@ -6,6 +6,11 @@
   align-items: flex-end;
   background-color: #eeca00;
   background-image: -webkit-linear-gradient(30deg, #ffd900 75%, #eeca00 25%);
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .header > h1 {
