@@ -5,11 +5,19 @@
   margin-bottom: 0.5rem;
 }
 
+.team-constraints {
+  display: block;
+  font-size: 0.9rem;
+  color: rgb(97, 97, 97);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .pokemon-team {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 0.5rem;
   padding: 1rem;
   width: 36rem;
   max-width: 36rem;
