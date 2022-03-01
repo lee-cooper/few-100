@@ -14,7 +14,8 @@ import { PokemonHeaderComponent } from './components/pokemon/components/pokemon-
 import { PokemonListComponent } from './components/pokemon/components/pokemon-list/pokemon-list.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonService } from './components/pokemon/services/pokemon.service';
-import { WeatherComponent } from './components/weather/weather.component';
+import { PokemonTeamComponent } from './components/pokemon/components/pokemon-team/pokemon-team.component';
+import { PokemonTeamMemberComponent } from './components/pokemon/components/pokemon-team-member/pokemon-team-member.component';
 
 /*
   An NgModule is defined by a class decorated with @NgModule(). The @NgModule() decorator is a function that takes a single metadata object, whose properties describe the module. The most important properties are as follows.
@@ -37,13 +38,14 @@ import { WeatherComponent } from './components/weather/weather.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    WeatherComponent,
     PokemonComponent,
     ExperimentComponent,
     PokemonHeaderComponent,
     PokemonDetailComponent,
     PokemonListComponent,
     FooterComponent,
+    PokemonTeamComponent,
+    PokemonTeamMemberComponent,
   ],
   imports: [
     BrowserModule,

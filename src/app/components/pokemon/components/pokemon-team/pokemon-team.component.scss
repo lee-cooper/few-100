@@ -1,0 +1,19 @@
+.component-header {
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-team {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 36rem;
+  max-width: 36rem;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  box-shadow: 0 0 7px 0px lightgrey;
+}

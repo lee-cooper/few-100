@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeatherComponent } from './weather.component';
+import { PokemonTeamMemberComponent } from './pokemon-team-member.component';
 
-describe('WeatherComponent', () => {
-  let component: WeatherComponent;
-  let fixture: ComponentFixture<WeatherComponent>;
+describe('PokemonTeamMemberComponent', () => {
+  let component: PokemonTeamMemberComponent;
+  let fixture: ComponentFixture<PokemonTeamMemberComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeatherComponent ]
+      declarations: [ PokemonTeamMemberComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WeatherComponent);
+    fixture = TestBed.createComponent(PokemonTeamMemberComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ExperimentComponent } from './components/experiment/experiment.component';
 import { HomeComponent } from './components/home/home.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
-import { WeatherComponent } from './components/weather/weather.component';
 
 // Routes are defined here. Based on the path the user navigates to,
 // the related component will display on-screen where the <router-outlet> is placed.
@@ -12,10 +11,6 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-  },
-  {
-    path: 'weather',
-    component: WeatherComponent,
   },
   {
     path: 'pokemon',

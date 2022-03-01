@@ -28,6 +28,11 @@
     background-color: inherit;
   }
 
+  button:focus {
+    outline: black solid 1px;
+    background-color: hsl(0, 0%, 82%);
+  }
+
   button:nth-of-type(1) {
     border-top: none;
   }
