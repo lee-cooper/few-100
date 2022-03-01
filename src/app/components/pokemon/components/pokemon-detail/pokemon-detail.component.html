@@ -1,5 +1,16 @@
 <span class="component-header">Pokemon Detail</span>
 <section class="pokemon-detail">
+  <!-- 
+    *ngIf
+
+    A structural directive that conditionally includes a template based on the value of 
+    an expression coerced to Boolean. When the expression evaluates to true, Angular 
+    renders the template provided in a then clause, and when false or null, Angular 
+    renders the template provided in an optional else clause. The default template 
+    for the else clause is blank.
+
+    See *ngIf - https://angular.io/api/common/NgIf
+   -->
   <div *ngIf="selectedPokemon != undefined"
        class="wrapper">
     <h2>#{{selectedPokemon?.id}} {{selectedPokemon?.name}}</h2>

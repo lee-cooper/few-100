@@ -23,10 +23,10 @@
 
     Consider the below code:
 
-    selectedPokemon]="pokemonDetail$ | async"
+    <app-pokemon-detail [selectedPokemon]="pokemonDetail$ | async"></app-pokemon-detail>
 
     - the 'pokemonDetails$' observable property on the parent component is bound to the 
-      'selectedPokemon' property on the child component. The value it held on the parent is 
+      'selectedPokemon' property on the child component. The value held on the parent is 
       passed down to the child.
     - Additionally, the pipe '|' and the 'async' subscribes to the latest value from the 'pokemonDetails$'
       observable on the parent component and return the latest value emitted. When the component is destroyed,

@@ -9,6 +9,8 @@ import { PokemonService } from './services/pokemon.service';
   styleUrls: ['./pokemon.component.scss'],
 })
 export class PokemonComponent implements OnInit {
+  // Observables push multiple values over time when subscribed to
+  // - See Observables --> https://rxjs.dev/guide/observable
   pokemonList$!: Observable<PokemonList>;
   pokemonDetail$!: Observable<PokemonDetail>;
 
@@ -24,9 +26,14 @@ export class PokemonComponent implements OnInit {
   }
 
   requestPokemonList(): void {
+    // Pokemon service returns an observable of Pokemon List from the Poke API
+    // and assigns it to the Observable on this component. That value is then passed down
+    // to the child component
     this.pokemonList$ = this.pokemonService.getPokemonList();
   }
 
+  // Called by the event emitter, requests pokemon detail data following
+  // after receiving an event emitted from the child component 'pokemon-list'
   requestPokemonDetail(pokemonListItem: PokemonListItem): void {
     this.pokemonDetail$ = this.pokemonService.getPokemonDetail(
       pokemonListItem.url

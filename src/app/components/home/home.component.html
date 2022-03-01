@@ -1,8 +1,23 @@
 <div class="home-header">
+  <!-- 
+    Text interpolation lets you incorporate dynamic string values into your HTML templates. 
+    Use interpolation to dynamically change what appears in an application view, such as displaying 
+    a custom greeting that includes the user's name, or in this case, the title and subtitle of the 
+    home component
+
+    See Text Interpolation - https://angular.io/guide/interpolation#text-interpolation
+  -->
   <h1>{{ homeTitle }}</h1>
   <span>{{ homeSubtitle }}</span>
 </div>
 <nav class="tiles">
+  <!-- 
+    When applied to an element in a template, makes that element a link that initiates 
+    navigation to a route. Navigation opens one or more routed components in one or more 
+    <router-outlet> locations on the page.
+
+    See RouterLink - https://angular.io/api/router/RouterLink
+   -->
   <a routerLink="/pokemon">
     <section class="tile">
       <h2>Pokemon</h2>
@@ -24,16 +39,6 @@
       <p>Partially built - apply learned concepts here.</p>
     </section>
   </a>
-  <!-- <a routerLink="/todo">
-    <section class="tile">
-      <h2>Todo</h2>
-      <mat-icon data-content="task"
-                class="material-icons-outlined">
-        task
-      </mat-icon>
-      <p>Might not need this if we have the weather API... TBD</p>
-    </section>
-  </a> -->
   <a routerLink="/experiment">
     <section class="tile">
       <h2>Experiment</h2>
