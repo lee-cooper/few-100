@@ -14,7 +14,7 @@ export class PokemonService {
 
   getPokemonList(): Observable<PokemonList> {
     return this.httpClient.get<PokemonList>(
-      `${this.rootUrl}/pokemon/?limit=151`
+      `${this.rootUrl}/pokemon/?limit=151` // String interpolation!
     );
   }
 

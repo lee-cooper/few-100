@@ -14,10 +14,38 @@
       See *ngFor - https://angular.io/guide/built-in-directives#listing-items-with-ngfor
      -->
     <li *ngFor="let pokemon of pokemonList?.results">
+      <!-- 
+        (click)
+
+        To bind to an event you use the Angular event binding syntax. This syntax consists of a 
+        target event name within parentheses to the left of an equal sign, and a quoted template 
+        statement to the right. 
+        
+        In the following example, the target event name is click and the template statement is selectPokemon().
+
+        Using the local pokemon looping variable, it can be passed as an argument to the component to perform
+        additional logic.
+
+        See Binding To event - https://angular.io/guide/event-binding#binding-to-events
+       -->
       <button (click)="selectPokemon(pokemon)"
               [ngClass]="{'highlight': pokemon?.name === selectedPokemon?.name}">
         {{ pokemon.name }}
       </button>
+      <!-- 
+        [ngClass]
+
+        Adds and removes CSS classes on an HTML element, depending on the type of the expression evaluation
+
+        Consider the following code:
+
+        [ngClass]="{'highlight': pokemon?.name === selectedPokemon?.name}"
+
+        The CSS class of 'highlight' will be applied if the local template pokemon name matches the
+        selected pokemon name on the component class
+
+        See ngClass - https://angular.io/api/common/NgClass
+       -->
     </li>
   </ul>
 </div>
